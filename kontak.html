@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak - Toko Baju Anak</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Kontak */
+      .kontak {
+        padding: 40px 0;
+      }
+
+      .kontak-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-top: 20px;
+      }
+
+      .form-kontak {
+        flex: 1;
+        min-width: 280px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-kontak input,
+      .form-kontak textarea {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+      }
+
+      .form-kontak button {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .form-kontak button:hover {
+        background-color: #45a049;
+      }
+
+      .info-kontak {
+        flex: 1;
+        min-width: 280px;
+      }
+
+      .info-kontak p {
+        margin-bottom: 10px;
+      }
+
+      /* Responsive Kontak */
+      @media (max-width: 768px) {
+        .kontak-grid {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="container">
+        <h1 class="logo">Toko Baju Anak</h1>
+        <button class="toggle-button" aria-label="Toggle Menu">&#9776;</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="tentangkami.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Konten Kontak -->
+    <main>
+      <section class="kontak">
+        <div class="container">
+          <h2>Hubungi Kami</h2>
+          <p>Silakan hubungi kami melalui form di bawah atau kunjungi toko kami.</p>
+
+          <div class="kontak-grid">
+            <form class="form-kontak">
+              <label for="nama">Nama:</label>
+              <input type="text" id="nama" name="nama" required />
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="pesan">Pesan:</label>
+              <textarea id="pesan" name="pesan" rows="5" required></textarea>
+
+              <button type="submit">Kirim Pesan</button>
+            </form>
+
+            <div class="info-kontak">
+              <h3>Informasi Toko</h3>
+              <p><strong>Alamat:</strong> Jl. Ceria No. 123, Jakarta</p>
+              <p><strong>Email:</strong> kontak@tokobajuanak.com</p>
+              <p><strong>Telepon:</strong> 0812-3456-7890</p>
+              <p><strong>Jam Operasional:</strong><br />Senin - Sabtu: 09.00 - 17.00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Toko Baju Anak. Semua hak dilindungi.</p>
+      </div>
+    </footer>
+
+    <!-- Toggle Menu -->
+    <script>
+      const toggleButton = document.querySelector(".toggle-button");
+      const navLinks = document.querySelector(".nav-links");
+      toggleButton.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

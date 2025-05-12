@@ -1,157 +1,55 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Detail Baju Anak - Baju 1</title>
-  <style>
-    /* Reset dasar */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    /* Navigasi */
-    nav {
-      background-color: #4CAF50;
-      color: white;
-      padding: 1rem 0;
-    }
-
-    nav .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1100px;
-      margin: auto;
-      padding: 0 20px;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-    }
-
-    .nav-links li a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .nav-links li a:hover {
-      text-decoration: underline;
-    }
-
-    /* Bagian detail produk */
-    .detail-produk {
-      flex: 1;
-      padding: 2rem 0;
-    }
-
-    .detail-wrapper {
-      max-width: 1100px;
-      margin: auto;
-      padding: 0 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: flex-start;
-    }
-
-    .grid-produk img {
-      width: 300px; /* Ukuran sedang */
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .info-produk {
-      flex: 1;
-    }
-
-    .info-produk h2 {
-      margin-bottom: 1rem;
-    }
-
-    .info-produk p {
-      margin-bottom: 0.5rem;
-    }
-
-    .btn-kembali {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #f08a5d;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-
-    .btn-kembali:hover {
-      background-color: #d76d3b;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 1rem 0;
-      text-align: center;
-      margin-top: auto;
-    }
-  </style>
-</head>
-<body>
-
-  <nav>
-    <div class="container">
-      <h1 class="logo">Toko Baju Anak</h1>
-      <ul class="nav-links">
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="#">Produk</a></li>
-        <li><a href="#">Tentang Kami</a></li>
-        <li><a href="#">Kontak</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main>
-    <section class="detail-produk">
-      <div class="container detail-wrapper">
-        <div class="grid-produk">
-          <img src="img/celana.webp" alt="Baju Anak 1">
-        </div>
-        <div class="info-produk">
-          <h2>Baju Anak Motif Kartun Lucu</h2>
-          <p><strong>Deskripsi:</strong> Satu set pakaian anak. Cocok untuk kegiatan sehari-hari maupun acara santai.</p>
-          <p><strong>Ukuran Tersedia:</strong> S, M, L, XL</p>
-          <p><strong>Bahan:</strong> Katun Combed 100%</p>
-          <p><strong>Merek:</strong> Anak Ceria</p>
-          <a href="index.html" class="btn-kembali">← Kembali ke Beranda</a>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detail Baju Anak - Baju 1</title>
+    <link rel="stylesheet" href="styledetail.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <h1 class="logo">Toko Baju Anak</h1>
+        <button class="toggle-button" aria-label="Toggle Menu">&#9776;</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="tentangkami.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Toko Baju Anak. Semua hak dilindungi.</p>
-    </div>
-  </footer>
+      <script>
+        const toggleButton = document.querySelector(".toggle-button");
+        const navLinks = document.querySelector(".nav-links");
 
-</body>
+        toggleButton.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
+      </script>
+    </nav>
+    <main>
+      <section class="detail-produk">
+        <div class="container detail-wrapper">
+          <div class="grid-produk">
+            <img src="img/celana.webp" alt="Baju Anak 1" />
+          </div>
+          <div class="info-produk">
+            <h2>Baju Anak Motif Kartun Lucu</h2>
+            <p><strong>Deskripsi:</strong> Satu set pakaian anak. Cocok untuk kegiatan sehari-hari maupun acara santai.</p>
+            <p><strong>Ukuran Tersedia:</strong> S, M, L, XL</p>
+            <p><strong>Bahan:</strong> Katun Combed 100%</p>
+            <p><strong>Merek:</strong> Anak Ceria</p>
+            <a href="index.html" class="btn-kembali">← Kembali ke Beranda</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Toko Baju Anak. Semua hak dilindungi.</p>
+      </div>
+    </footer>
+  </body>
 </html>
