@@ -1,52 +1,63 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Toko Baju Anak</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <nav>
-    <div class="container">
-      <h1 class="logo">Toko Baju Anak</h1>
-      <ul class="nav-links">
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#">Produk</a></li>
-        <li><a href="#">Tentang Kami</a></li>
-        <li><a href="#">Kontak</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <header>
-    <div class="container">
-      <h2>Selamat datang di Toko Baju Anak!</h2>
-      <p>Pilihan terbaik untuk si kecil.</p>
-    </div>
-  </header>
-
-  <main>
-    <section class="produk">
-      <h3>Pilihan Baju Anak</h3>
-      <div class="grid-produk">
-        <!-- Ganti # dengan link gambar asli -->
-        <a href="baju1.html"><img src="img/pink.jpg" alt="Baju 1"></a>
-        <a href="baju2.html"><img src="img/biru.jpg" alt="Baju 2"></a>
-        <a href="baju3.html"><img src="img/abu.png" alt="Baju 3"></a>
-        <a href="baju4.html"><img src="img/merah.jpg" alt="Baju 4"></a>
-        <a href="baju5.html"><img src="img/dongker.jpg" alt="Baju 5"></a>
-        <a href="baju6.html"><img src="img/bunga.avif" alt="Baju 6"></a>
-        <a href="baju7.html"><img src="img/kemeja.jpg" alt="Baju 7"></a>
-        <a href="baju8.html"><img src="img/celana.webp" alt="Baju 8"></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toko Baju Anak</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <h1 class="logo">Toko Baju Anak</h1>
+        <button class="toggle-button" aria-label="Toggle Menu">&#9776;</button>
+        <ul class="nav-links">
+          <li><a href="#">Beranda</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="tentangkami.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Toko Baju Anak. Semua hak dilindungi.</p>
-    </div>
-  </footer>
-</body>
+      <script>
+        const toggleButton = document.querySelector(".toggle-button");
+        const navLinks = document.querySelector(".nav-links");
+
+        toggleButton.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
+      </script>
+    </nav>
+
+    <header>
+      <div class="container">
+        <h2>Selamat datang di Toko Baju Anak!</h2>
+        <p>Pilihan terbaik untuk si kecil.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="produk">
+        <div class="container">
+          <h2>Produk Kami</h2>
+          <div class="grid-produk">
+            <a href="baju1.html"><img src="img/pink.jpg" alt="Baju 1" /></a>
+            <a href="baju2.html"><img src="img/biru.jpg" alt="Baju 2" /></a>
+            <a href="baju3.html"><img src="img/abu.png" alt="Baju 3" /></a>
+            <a href="baju4.html"><img src="img/merah.jpg" alt="Baju 4" /></a>
+            <a href="baju5.html"><img src="img/dongker.jpg" alt="Baju 5" /></a>
+            <a href="baju6.html"><img src="img/bunga.avif" alt="Baju 6" /></a>
+            <a href="baju7.html"><img src="img/kemeja.jpg" alt="Baju 7" /></a>
+            <a href="baju8.html"><img src="img/celana.webp" alt="Baju 8" /></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Toko Baju Anak. Semua hak dilindungi.</p>
+      </div>
+    </footer>
+  </body>
 </html>
