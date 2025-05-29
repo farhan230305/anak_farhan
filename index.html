@@ -7,35 +7,62 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <div class="container">
-        <h1 class="logo">Toko Baju Anak</h1>
-        <button class="toggle-button" aria-label="Toggle Menu">&#9776;</button>
-        <ul class="nav-links">
-          <li><a href="#">Beranda</a></li>
-          <li><a href="produk.html">Produk</a></li>
-          <li><a href="tentangkami.html">Tentang Kami</a></li>
-          <li><a href="kontak.html">Kontak</a></li>
-        </ul>
+    <div class="header-atas">
+      <!-- Left side -->
+      <div class="header-left">
+        <a href="index.html">Home</a>
       </div>
 
-      <script>
-        const toggleButton = document.querySelector(".toggle-button");
-        const navLinks = document.querySelector(".nav-links");
-
-        toggleButton.addEventListener("click", () => {
-          navLinks.classList.toggle("active");
-        });
-      </script>
-    </nav>
-
+      <!-- Kanan -->
+      <div class="header-right">
+        <div style="gap: 0"><input type="text" placeholder="search" /> <a href="#">Cari</a></div>
+        <a href="#">Login</a>
+      </div>
+    </div>
     <header>
-      <div class="container">
-        <h2>Selamat datang di Toko Baju Anak!</h2>
-        <p>Pilihan terbaik untuk si kecil.</p>
+      <div class="logo">Toko Baju Anak</div>
+      <div class="cart">
+        <a href=""
+          ><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path
+              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+            />
+          </svg>
+        </a>
       </div>
+
+      <nav id="navbar">
+        <a href="produk.html"><button class="nav-button">Produk</button></a>
+        <a href="tentangkami.html"><button class="nav-button">tentang Kami</button></a>
+        <a href="kontak.html"><button class="nav-button">Kontak</button></a>
+      </nav>
     </header>
 
+    <div class="menu">
+      <span style="font-size: 20px; cursor: pointer" onclick="openNav()">Menu</span>
+
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Beranda</a>
+        <a href="produk.html">Produk</a>
+        <a href="tentangkami.html">tentang Kami</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="image-slider">
+        <div class="slide active" style="background-image: url('img/abu.png')"></div>
+        <div class="slide" style="background-image: url('img/abu.png')"></div>
+        <div class="slide" style="background-image: url('img/abu.png')"></div>
+      </div>
+      <div class="hero-content">
+        <h2>Selamat Datang di Toko Baju Anak</h2>
+        <p>Pilihan Terbaik untuk sikecil</p>
+        <a href="produk.html"><button class="btn-primary">Produk Kami</button></a>
+      </div>
+      <button class="slider-btn prev-btn">&lt;</button>
+      <button class="slider-btn next-btn">&gt;</button>
+    </section>
     <main>
       <section class="produk">
         <div class="container">
@@ -52,6 +79,65 @@
           </div>
         </div>
       </section>
+
+      <section class="comments-section">
+        <div class="container">
+          <h2>Apa Kata Pelanggan Kami?</h2>
+          <div class="comments-list">
+            <div class="scrollable-comments">
+              <div class="comment-item">
+                <div class="comment-header">
+                  <span class="comment-author">Bunda Sarah</span>
+                  <span class="comment-date">2025-05-29</span>
+                </div>
+                <p class="comment-text">Baju-bajunya lucu dan bahannya adem banget! Anak saya suka sekali. Pasti langganan di sini.</p>
+              </div>
+              <div class="comment-item">
+                <div class="comment-header">
+                  <span class="comment-author">Ayah Budi</span>
+                  <span class="comment-date">2025-05-28</span>
+                </div>
+                <p class="comment-text">Pengiriman cepat dan kualitas produk sangat bagus. Desainnya modern dan nyaman dipakai anak.</p>
+              </div>
+              <div class="comment-item">
+                <div class="comment-header">
+                  <span class="comment-author">Kakak Lita</span>
+                  <span class="comment-date">2025-05-27</span>
+                </div>
+                <p class="comment-text">Sangat puas dengan pembelian pertama! Produk sesuai deskripsi dan harganya bersaing.</p>
+              </div>
+              <div class="comment-item">
+                <div class="comment-header">
+                  <span class="comment-author">Nenek Ani</span>
+                  <span class="comment-date">2025-05-26</span>
+                </div>
+                <p class="comment-text">Cucu saya terlihat menggemaskan pakai baju dari toko ini. Bahannya nyaman dan tidak panas.</p>
+              </div>
+              <div class="comment-item">
+                <div class="comment-header">
+                  <span class="comment-author">Ibu Rina</span>
+                  <span class="comment-date">2025-05-25</span>
+                </div>
+                <p class="comment-text">Pilihan motifnya banyak dan modelnya kekinian. Anak saya jadi stylish! Terima kasih Toko Baju Anak.</p>
+              </div>
+              <div class="comment-item">
+                <div class="comment-header">
+                  <span class="comment-author">Pak Danang</span>
+                  <span class="comment-date">2025-05-24</span>
+                </div>
+                <p class="comment-text">Sangat rekomendasi toko ini! Pelayanan ramah dan baju-baju anak berkualitas.</p>
+              </div>
+              <div class="comment-item">
+                <div class="comment-header">
+                  <span class="comment-author">Tante Mia</span>
+                  <span class="comment-date">2025-05-23</span>
+                </div>
+                <p class="comment-text">Baru pertama kali belanja di sini, langsung jatuh cinta. Pilihan ukuran lengkap dan warnanya cerah-cerah. Pasti beli lagi!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -59,5 +145,7 @@
         <p>&copy; 2025 Toko Baju Anak. Semua hak dilindungi.</p>
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
