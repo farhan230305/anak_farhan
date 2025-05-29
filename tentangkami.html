@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kami - Toko Baju Anak</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Reset dan dasar */
+      /* Konten utama */
+      .tentang-kami {
+        padding: 40px 0;
+        background-color: #fff;
+      }
+
+      .tentang-kami h3 {
+        margin-top: 20px;
+        color: #444;
+      }
+
+      .tentang-kami p,
+      .tentang-kami ul {
+        color: #555;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .tentang-kami ul {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <h1 class="logo">Toko Baju Anak</h1>
+        <button class="toggle-button" aria-label="Toggle Menu">&#9776;</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="tentangkami.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="header-tentang">
+      <div class="container">
+        <h2>Tentang Kami</h2>
+      </div>
+    </header>
+
+    <main>
+      <section class="tentang-kami">
+        <div class="container">
+          <h3>Siapa Kami?</h3>
+          <p>Kami adalah Toko Baju Anak, penyedia pakaian anak terpercaya sejak 2020. Kami berkomitmen menghadirkan pakaian yang nyaman, lucu, dan berkualitas tinggi untuk si kecil.</p>
+
+          <h3>Visi</h3>
+          <p>Menjadi toko pakaian anak terbaik dan terpercaya di Indonesia.</p>
+
+          <h3>Misi</h3>
+          <ul>
+            <li>Memberikan produk yang aman dan nyaman untuk anak-anak.</li>
+            <li>Menyediakan pelayanan cepat dan ramah.</li>
+            <li>Mengikuti tren fashion anak terkini.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Toko Baju Anak. Semua hak dilindungi.</p>
+      </div>
+    </footer>
+
+    <script>
+      const toggleButton = document.querySelector(".toggle-button");
+      const navLinks = document.querySelector(".nav-links");
+
+      toggleButton.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
